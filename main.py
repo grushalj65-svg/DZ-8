@@ -1,8 +1,14 @@
-import logging
+def login():
+    correct_user = "admin"
+    correct_pass = "12345"
 
-logging.basicConfig(level=logging.ERROR, format='%(levelname)s: %(message)s')
+    username = input("Введіть ім'я користувача: ")
+    password = input("Введіть пароль: ")
 
-try:
-    x = 10 / 0
-except Exception as e:
-    logging.error("Виникла помилка: " + str(e))
+    if username == correct_user and password == correct_pass:
+        print("Вхід виконано успішно")
+    else:
+        print("Невірне ім'я користувача або пароль")
+
+login()
+
