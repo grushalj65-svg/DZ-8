@@ -1,10 +1,32 @@
-def check_age():
-    age = int(input("Введіть свій вік: "))
+def process_list():
 
-    if age >= 18:
-        print("Ви можете використовувати цей сервіс")
+    data = input("Введіть елементи списку через кому: ")        # Користувач вводить елементи через кому
+    input_list = []
+    i = 0
+    while i < 1000:  # обмежуємо кількість елементів
+        try:
+
+            input_list = data.split(",")          # Розділяємо рядок на елементи
+            break
+        except:
+            print("Неправильний формат")
+            break
+
+
+    count = 0
+    i = 0
+    while i < 10000:
+        try:
+            _ = input_list[i]
+            count = count + 1
+            i = i + 1
+        except IndexError:
+            break
+
+    if count >= 3:
+        print("Список містить {} елементів".format(count))
     else:
-        print("Вам має бути 18 років або більше")
+        print("Список повинен містити принаймні 3 елементи")
 
 
-check_age()
+process_list()
