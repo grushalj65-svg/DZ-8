@@ -1,14 +1,10 @@
-def login():
-    correct_user = "admin"
-    correct_pass = "12345"
+def check_age():
+    age = int(input("Введіть свій вік: "))
 
-    username = input("Введіть ім'я користувача: ")
-    password = input("Введіть пароль: ")
-
-    if username == correct_user and password == correct_pass:
-        print("Вхід виконано успішно")
+    if age >= 18:
+        print("Ви можете використовувати цей сервіс")
     else:
-        print("Невірне ім'я користувача або пароль")
+        print("Вам має бути 18 років або більше")
 
-login()
 
+check_age()
